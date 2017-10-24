@@ -6,21 +6,6 @@
     android:orientation="vertical"
     android:gravity="center">
 
-    <TextView
-        android:id="@+id/textview_signingoogle"
-        android:onClick="googleSignIn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/navigationview_signingoogle"
-        android:gravity="center"
-        android:background="@color/red"
-        style="@style/TextH2White"
-        android:padding="10dp"
-        android:drawableLeft="@drawable/google"
-        android:drawablePadding="10dp"
-        android:drawableStart="@drawable/google"
-        android:visibility="visible"/>
-
     <LinearLayout
         android:id="@+id/linearlayout_user"
         android:layout_width="match_parent"

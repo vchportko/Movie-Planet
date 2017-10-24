@@ -4,6 +4,8 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/Capstone-Project.iml" filepath="$PROJECT_DIR$/Capstone-Project.iml" />
       <module fileurl="file://$PROJECT_DIR$/Movie-Check-master.iml" filepath="$PROJECT_DIR$/Movie-Check-master.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Movie-Planet.iml" filepath="$PROJECT_DIR$/Movie-Planet.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
   </component>

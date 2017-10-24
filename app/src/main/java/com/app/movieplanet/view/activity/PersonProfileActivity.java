@@ -1,0 +1,132 @@
+package com.app.movieplanet.view.activity;
+
+import android.content.Context;
+import android.content.Intent;
+import android.os.Bundle;
+import android.support.annotation.Nullable;
+import android.support.design.widget.TabLayout;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentPagerAdapter;
+import android.support.v4.view.ViewPager;
+import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
+import android.view.MenuItem;
+
+import com.google.android.gms.analytics.HitBuilders;
+import com.google.android.gms.analytics.Tracker;
+import com.app.movieplanet.MovieCheckApplication;
+import com.app.movieplanet.R;
+import com.app.movieplanet.dagger.PersonProfileViewModule;
+import com.app.movieplanet.model.entity.Person;
+import com.app.movieplanet.presenter.PersonProfilePresenter;
+import com.app.movieplanet.view.PersonProfileView;
+import com.app.movieplanet.view.fragment.ListPersonMediaFragment;
+import com.app.movieplanet.view.fragment.PersonDetailFragment;
+import com.app.movieplanet.view.fragment.PersonWorkFragment;
+
+import javax.inject.Inject;
+
+import butterknife.Bind;
+import butterknife.ButterKnife;
+
+public class PersonProfileActivity extends AppCompatActivity implements PersonProfileView {
+
+    private static final String KEY_PERSON = "PERSON";
+
+    @Inject
+    PersonProfilePresenter presenter;
+
+    @Nullable
+    @Bind(R.id.viewpager)
+    ViewPager viewPager;
+    @Bind(R.id.toolbar)
+    Toolbar toolbar;
+    @Nullable @Bind(R.id.tabs)
+    TabLayout tabLayout;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_personprofile);
+        ButterKnife.bind(this);
+        ((MovieCheckApplication) getApplication()).getObjectGraph().plus(new PersonProfileViewModule(this)).inject(this);
+
+        setSupportActionBar(toolbar);
+
+        final Person person = getIntent().getParcelableExtra(KEY_PERSON);
+
+        presenter.init(person);
+
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
+        if (viewPager != null) {
+            viewPager.setAdapter(new FragmentPagerAdapter(getSupportFragmentManager()) {
+                @Override
+                public Fragment getItem(int position) {
+                    switch (position) {
+                        case 0:
+                            return PersonDetailFragment.newInstance(person);
+                        case 1:
+                            return PersonWorkFragment.newInstance(person);
+                        case 2:
+                            return ListPersonMediaFragment.newInstance(person);
+                        default:
+                            return null;
+                    }
+                }
+
+                @Override
+                public int getCount() {
+                    return 3;
+                }
+
+                @Override
+                public CharSequence getPageTitle(int position) {
+                    switch (position) {
+                        case 0:
+                            return getString(R.string.personprofileactivity_general);
+                        case 1:
+                            return getString(R.string.personprofileactivity_works);
+                        case 2:
+                            return getString(R.string.personprofileactivity_media);
+                        default:
+                            return null;
+                    }
+                }
+            });
+            tabLayout.setupWithViewPager(viewPager);
+        } else {
+            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_detail, PersonDetailFragment.newInstance(person)).commit();
+            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_work, PersonWorkFragment.newInstance(person)).commit();
+            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_media, ListPersonMediaFragment.newInstance(person)).commit();
+        }
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        Tracker defaultTracker = ((MovieCheckApplication) getApplication()).getDefaultTracker();
+        defaultTracker.setScreenName("Person Profile Screen");
+        defaultTracker.send(new HitBuilders.ScreenViewBuilder().build());
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case android.R.id.home:
+                finish();
+        }
+        return super.onOptionsItemSelected(item);
+    }
+
+    public static Intent newIntent(Context context, Person person) {
+        Intent intent = new Intent(context, PersonProfileActivity.class);
+        intent.putExtra(KEY_PERSON, person);
+        return intent;
+    }
+
+    @Override
+    public void showPersonName(String title) {
+        getSupportActionBar().setTitle(title);
+    }
+}
