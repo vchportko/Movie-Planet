@@ -4,7 +4,6 @@ import android.content.res.ColorStateList;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.design.widget.FloatingActionButton;
-import android.support.v4.app.ActivityOptionsCompat;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.StaggeredGridLayoutManager;
@@ -29,7 +28,6 @@ import com.tassioauad.moviecheck.model.entity.Movie;
 import com.tassioauad.moviecheck.presenter.MovieDetailPresenter;
 import com.tassioauad.moviecheck.view.MovieDetailView;
 import com.tassioauad.moviecheck.view.activity.FullImageSliderActivity;
-import com.tassioauad.moviecheck.view.activity.ListMoviesByGenreActivity;
 import com.tassioauad.moviecheck.view.adapter.GenreListAdapter;
 import com.tassioauad.moviecheck.view.adapter.OnItemClickListener;
 
@@ -222,7 +220,7 @@ public class MovieDetailFragment extends Fragment implements MovieDetailView {
         recyclerViewGenres.setAdapter(new GenreListAdapter(genreList, new OnItemClickListener<Genre>() {
             @Override
             public void onClick(Genre genre, View view) {
-                startActivity(ListMoviesByGenreActivity.newIntent(getActivity(), genre), ActivityOptionsCompat.makeSceneTransitionAnimation(getActivity()).toBundle());
+//                startActivity(ListMoviesByGenreActivity.newIntent(getActivity(), genre), ActivityOptionsCompat.makeSceneTransitionAnimation(getActivity()).toBundle());
             }
 
             @Override

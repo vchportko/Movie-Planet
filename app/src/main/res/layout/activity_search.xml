@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@color/white"
-    android:orientation="vertical">
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/white"
+              android:orientation="vertical">
 
     <include
         android:id="@+id/toolbar"
-        layout="@layout/toobar" />
+        layout="@layout/toobar"/>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -38,9 +38,9 @@
                     style="@style/TextH2"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
+                    android:layout_marginBottom="5dp"
                     android:layout_weight="0.8"
-                    android:text="@string/searchactivity_movies"
-                    android:layout_marginBottom="5dp"/>
+                    android:text="@string/searchactivity_movies"/>
 
                 <TextView
                     android:id="@+id/textview_moremovie"
@@ -53,8 +53,8 @@
                     android:drawableRight="@drawable/next"
                     android:gravity="end|center_vertical"
                     android:onClick="moreMovie"
-                    android:visibility="gone"
-                    android:text="@string/general_more" />
+                    android:text="@string/general_more"
+                    android:visibility="gone"/>
 
             </LinearLayout>
 
@@ -66,7 +66,7 @@
                     android:id="@+id/recyclerview_movie"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:visibility="visible" />
+                    android:visibility="visible"/>
 
                 <include
                     android:id="@+id/linearlayout_movie_anyfounded"
@@ -84,7 +84,7 @@
                     android:layout_centerHorizontal="true"
                     android:layout_centerVertical="true"
                     android:indeterminate="true"
-                    android:visibility="gone" />
+                    android:visibility="gone"/>
 
             </RelativeLayout>
 
@@ -94,7 +94,8 @@
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="0.5"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:visibility="gone">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -111,9 +112,9 @@
                     style="@style/TextH2"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
+                    android:layout_marginBottom="5dp"
                     android:layout_weight="0.8"
-                    android:text="@string/searchactivity_celebrities"
-                    android:layout_marginBottom="5dp"/>
+                    android:text="@string/searchactivity_celebrities"/>
 
                 <TextView
                     android:id="@+id/textview_moreperson"
@@ -126,8 +127,8 @@
                     android:drawableRight="@drawable/next"
                     android:gravity="end|center_vertical"
                     android:onClick="morePerson"
-                    android:visibility="gone"
-                    android:text="@string/general_more" />
+                    android:text="@string/general_more"
+                    android:visibility="gone"/>
 
             </LinearLayout>
 
@@ -139,7 +140,7 @@
                     android:id="@+id/recyclerview_person"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:visibility="visible" />
+                    android:visibility="visible"/>
 
                 <include
                     android:id="@+id/linearlayout_person_anyfounded"
@@ -157,7 +158,7 @@
                     android:layout_centerHorizontal="true"
                     android:layout_centerVertical="true"
                     android:indeterminate="true"
-                    android:visibility="gone" />
+                    android:visibility="gone"/>
 
             </RelativeLayout>
 

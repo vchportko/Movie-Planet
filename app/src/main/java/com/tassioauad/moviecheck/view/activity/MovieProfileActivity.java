@@ -20,9 +20,7 @@ import com.tassioauad.moviecheck.dagger.MovieProfileViewModule;
 import com.tassioauad.moviecheck.model.entity.Movie;
 import com.tassioauad.moviecheck.presenter.MovieProfilePresenter;
 import com.tassioauad.moviecheck.view.MovieProfileView;
-import com.tassioauad.moviecheck.view.fragment.CastCrewFragment;
 import com.tassioauad.moviecheck.view.fragment.ListMovieMediaFragment;
-import com.tassioauad.moviecheck.view.fragment.ListReviewFragment;
 import com.tassioauad.moviecheck.view.fragment.MovieDetailFragment;
 
 import javax.inject.Inject;
@@ -67,11 +65,11 @@ public class MovieProfileActivity extends AppCompatActivity implements MovieProf
                     switch (position) {
                         case 0:
                             return MovieDetailFragment.newInstance(movie, true);
+//                        case 1:
+//                            return CastCrewFragment.newInstance(movie);
+//                        case 2:
+//                            return ListReviewFragment.newInstance(movie);
                         case 1:
-                            return CastCrewFragment.newInstance(movie);
-                        case 2:
-                            return ListReviewFragment.newInstance(movie);
-                        case 3:
                             return ListMovieMediaFragment.newInstance(movie);
                         default:
                             return null;
@@ -80,7 +78,7 @@ public class MovieProfileActivity extends AppCompatActivity implements MovieProf
 
                 @Override
                 public int getCount() {
-                    return 4;
+                    return 2;
                 }
 
                 @Override
@@ -88,11 +86,11 @@ public class MovieProfileActivity extends AppCompatActivity implements MovieProf
                     switch (position) {
                         case 0:
                             return getString(R.string.movieprofileactivity_general);
+//                        case 1:
+//                            return getString(R.string.movieprofileactivity_castcrew);
+//                        case 2:
+//                            return getString(R.string.movieprofileactivity_reviews);
                         case 1:
-                            return getString(R.string.movieprofileactivity_castcrew);
-                        case 2:
-                            return getString(R.string.movieprofileactivity_reviews);
-                        case 3:
                             return getString(R.string.movieprofileactivity_media);
                         default:
                             return null;
@@ -103,8 +101,8 @@ public class MovieProfileActivity extends AppCompatActivity implements MovieProf
         } else {
             getSupportFragmentManager().beginTransaction().replace(R.id.fragment_media, ListMovieMediaFragment.newInstance(movie)).commit();
             getSupportFragmentManager().beginTransaction().replace(R.id.fragment_detail, MovieDetailFragment.newInstance(movie, true)).commit();
-            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_castcrew, CastCrewFragment.newInstance(movie)).commit();
-            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_review, ListReviewFragment.newInstance(movie)).commit();
+//            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_castcrew, CastCrewFragment.newInstance(movie)).commit();
+//            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_review, ListReviewFragment.newInstance(movie)).commit();
         }
     }
 

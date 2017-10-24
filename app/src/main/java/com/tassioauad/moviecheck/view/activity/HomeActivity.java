@@ -192,24 +192,24 @@ public class HomeActivity extends AppCompatActivity implements HomeView, GoogleA
             public boolean onNavigationItemSelected(MenuItem item) {
                 switch (item.getItemId()) {
                     case R.id.drawer_search:
-                        startActivity(SearchActivity.newIntent(HomeActivity.this), ActivityOptionsCompat.makeSceneTransitionAnimation(HomeActivity.this).toBundle());
+//                        startActivity(SearchActivity.newIntent(HomeActivity.this), ActivityOptionsCompat.makeSceneTransitionAnimation(HomeActivity.this).toBundle());
                         drawerLayout.closeDrawers();
                         break;
                     case R.id.drawer_discovery:
-                        new ShowcaseView.Builder(HomeActivity.this)
-                                .setTarget(new ViewTarget(navigationView.getHeaderView(0).findViewById(R.id.textview_signingoogle)))
-                                .setStyle(R.style.CustomShowcaseTheme)
-                                .setContentTitle(getString(R.string.homeactivity_discovermoviestitle))
-                                .setContentText(getString(R.string.homeactivity_discovermoviesdetails))
-                                .hideOnTouchOutside()
-                                .build();
+//                        new ShowcaseView.Builder(HomeActivity.this)
+//                                .setTarget(new ViewTarget(navigationView.getHeaderView(0).findViewById(R.id.textview_signingoogle)))
+//                                .setStyle(R.style.CustomShowcaseTheme)
+//                                .setContentTitle(getString(R.string.homeactivity_discovermoviestitle))
+//                                .setContentText(getString(R.string.homeactivity_discovermoviesdetails))
+//                                .hideOnTouchOutside()
+//                                .build();
                         break;
                     case R.id.drawer_nowplaying:
-                        startActivity(ListNowPlayingMoviesActivity.newIntent(HomeActivity.this), ActivityOptionsCompat.makeSceneTransitionAnimation(HomeActivity.this).toBundle());
+//                        startActivity(ListNowPlayingMoviesActivity.newIntent(HomeActivity.this), ActivityOptionsCompat.makeSceneTransitionAnimation(HomeActivity.this).toBundle());
                         drawerLayout.closeDrawers();
                         break;
                     case R.id.drawer_upcoming:
-                        startActivity(ListUpcomingMoviesActivity.newIntent(HomeActivity.this), ActivityOptionsCompat.makeSceneTransitionAnimation(HomeActivity.this).toBundle());
+//                        startActivity(ListUpcomingMoviesActivity.newIntent(HomeActivity.this), ActivityOptionsCompat.makeSceneTransitionAnimation(HomeActivity.this).toBundle());
                         drawerLayout.closeDrawers();
                         break;
                     case R.id.drawer_toprated:
