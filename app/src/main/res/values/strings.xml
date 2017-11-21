@@ -123,4 +123,9 @@
     <string name="discoveryactivity_movieremovedwatchlater">Movie removed from \'To Watch List\'</string>
     <string name="upcomingmovieswidget_title">Upcoming Movies</string>
 
+    <!--ListViewItemGenre -->
+    <string name="listviewitem_genre_comedy">Comedy</string>
+
+    <!--ListViewItem_ShowMore-->
+    <string name="listviewitem_showmore_title">Show More</string>
 </resources>

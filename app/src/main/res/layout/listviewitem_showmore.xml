@@ -13,6 +13,6 @@
         android:layout_height="60dp"
         android:gravity="center"
         android:textColor="@color/white"
-        android:text="Show More" />
+        android:text="@string/listviewitem_showmore_title" />
 
 </LinearLayout>

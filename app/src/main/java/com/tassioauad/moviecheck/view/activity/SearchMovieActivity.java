@@ -19,7 +19,6 @@ import com.google.android.gms.analytics.HitBuilders;
 import com.google.android.gms.analytics.Tracker;
 import com.tassioauad.moviecheck.MovieCheckApplication;
 import com.tassioauad.moviecheck.R;
-import com.tassioauad.moviecheck.dagger.ListUpcomingMoviesViewModule;
 import com.tassioauad.moviecheck.dagger.SearchMovieViewModule;
 import com.tassioauad.moviecheck.model.entity.Movie;
 import com.tassioauad.moviecheck.presenter.SearchMoviePresenter;
@@ -28,7 +27,6 @@ import com.tassioauad.moviecheck.view.adapter.ListViewAdapterWithPagination;
 import com.tassioauad.moviecheck.view.adapter.MovieListAdapter;
 import com.tassioauad.moviecheck.view.adapter.OnItemClickListener;
 import com.tassioauad.moviecheck.view.adapter.OnShowMoreListener;
-import com.tassioauad.moviecheck.view.adapter.UpcomingMovieListAdapter;
 
 import java.util.ArrayList;
 import java.util.List;

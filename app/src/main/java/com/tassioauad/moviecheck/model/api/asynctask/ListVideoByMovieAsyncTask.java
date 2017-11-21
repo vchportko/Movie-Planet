@@ -3,7 +3,6 @@ package com.tassioauad.moviecheck.model.api.asynctask;
 import android.content.Context;
 
 import com.tassioauad.moviecheck.model.api.asynctask.exception.BadRequestException;
-import com.tassioauad.moviecheck.model.api.resource.CastResource;
 import com.tassioauad.moviecheck.model.api.resource.VideoResource;
 import com.tassioauad.moviecheck.model.entity.Movie;
 import com.tassioauad.moviecheck.model.entity.Video;

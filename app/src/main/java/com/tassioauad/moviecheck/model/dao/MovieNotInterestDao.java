@@ -1,7 +1,6 @@
 package com.tassioauad.moviecheck.model.dao;
 
 import com.tassioauad.moviecheck.model.entity.Movie;
-import com.tassioauad.moviecheck.model.entity.MovieInterest;
 import com.tassioauad.moviecheck.model.entity.MovieNotInterest;
 import com.tassioauad.moviecheck.model.entity.User;
 

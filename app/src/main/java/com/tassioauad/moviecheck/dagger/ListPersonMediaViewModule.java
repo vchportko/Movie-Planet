@@ -2,7 +2,6 @@ package com.tassioauad.moviecheck.dagger;
 
 import com.tassioauad.moviecheck.model.api.ImageApi;
 import com.tassioauad.moviecheck.presenter.ListPersonMediaPresenter;
-import com.tassioauad.moviecheck.view.ListMovieMediaView;
 import com.tassioauad.moviecheck.view.ListPersonMediaView;
 import com.tassioauad.moviecheck.view.fragment.ListPersonMediaFragment;
 

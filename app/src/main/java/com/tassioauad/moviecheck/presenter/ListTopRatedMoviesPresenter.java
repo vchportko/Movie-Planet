@@ -3,7 +3,6 @@ package com.tassioauad.moviecheck.presenter;
 import com.tassioauad.moviecheck.model.api.MovieApi;
 import com.tassioauad.moviecheck.model.api.asynctask.ApiResultListener;
 import com.tassioauad.moviecheck.model.entity.Movie;
-import com.tassioauad.moviecheck.view.ListPopularMoviesView;
 import com.tassioauad.moviecheck.view.ListTopRatedMoviesView;
 
 import java.util.List;

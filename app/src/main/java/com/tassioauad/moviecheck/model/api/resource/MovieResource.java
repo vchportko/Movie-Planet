@@ -1,7 +1,6 @@
 package com.tassioauad.moviecheck.model.api.resource;
 
 import com.tassioauad.moviecheck.model.entity.Movie;
-import com.tassioauad.moviecheck.model.entity.Person;
 
 import java.util.List;
 

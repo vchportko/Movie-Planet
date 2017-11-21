@@ -41,7 +41,7 @@
                     android:padding="10dp"
                     android:background="@color/white"
                     android:layout_marginTop="1dp"
-                    android:text="Reviews"/>
+                    android:text="@string/movieprofileactivity_reviews"/>
 
                 <FrameLayout
                     android:id="@+id/fragment_review"

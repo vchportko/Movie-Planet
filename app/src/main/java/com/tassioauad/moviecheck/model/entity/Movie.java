@@ -189,7 +189,7 @@ public class Movie implements Parcelable {
         this.adult = in.readByte() != 0;
         this.voteAverage = in.readFloat();
         this.voteCount = in.readLong();
-        this.genreId = new ArrayList<Long>();
+        this.genreId = new ArrayList<>();
         in.readList(this.genreId, List.class.getClassLoader());
         this.language = in.readString();
         this.popularity = in.readDouble();

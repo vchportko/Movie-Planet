@@ -9,7 +9,6 @@ import com.tassioauad.moviecheck.model.api.asynctask.DiscoverMoviesAsyncTask;
 import com.tassioauad.moviecheck.model.api.asynctask.ListMovieByGenreAsyncTask;
 import com.tassioauad.moviecheck.model.api.asynctask.ListMoviesByNameAsyncTask;
 import com.tassioauad.moviecheck.model.api.asynctask.ListNowPlayingMoviesAsyncTask;
-import com.tassioauad.moviecheck.model.api.asynctask.ListPersonByNameAsyncTask;
 import com.tassioauad.moviecheck.model.api.asynctask.ListPopularMoviesAsyncTask;
 import com.tassioauad.moviecheck.model.api.asynctask.ListTopRatedMoviesAsyncTask;
 import com.tassioauad.moviecheck.model.api.asynctask.ListUpComingMovieAsyncTask;

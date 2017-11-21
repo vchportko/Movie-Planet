@@ -27,7 +27,6 @@ import com.tassioauad.moviecheck.model.entity.User;
 import com.tassioauad.moviecheck.presenter.UserDetailPresenter;
 import com.tassioauad.moviecheck.view.UserDetailView;
 import com.tassioauad.moviecheck.view.activity.DiscoveryActivity;
-import com.tassioauad.moviecheck.view.activity.FullImageSliderActivity;
 import com.tassioauad.moviecheck.view.activity.ListMoviesByGenreActivity;
 import com.tassioauad.moviecheck.view.activity.MovieProfileActivity;
 import com.tassioauad.moviecheck.view.adapter.GenreListAdapter;
@@ -149,8 +148,7 @@ public class UserDetailFragment extends Fragment implements UserDetailView {
     }
 
     public static UserDetailFragment newInstance() {
-        UserDetailFragment fragment = new UserDetailFragment();
-        return fragment;
+        return new UserDetailFragment();
     }
 
     @Override

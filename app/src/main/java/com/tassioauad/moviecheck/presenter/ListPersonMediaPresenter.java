@@ -4,7 +4,6 @@ import com.tassioauad.moviecheck.model.api.ImageApi;
 import com.tassioauad.moviecheck.model.api.asynctask.ApiResultListener;
 import com.tassioauad.moviecheck.model.entity.Image;
 import com.tassioauad.moviecheck.model.entity.Person;
-import com.tassioauad.moviecheck.view.ListMovieMediaView;
 import com.tassioauad.moviecheck.view.ListPersonMediaView;
 
 import java.util.List;

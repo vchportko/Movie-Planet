@@ -4,7 +4,6 @@ import android.content.Context;
 
 import com.tassioauad.moviecheck.model.api.asynctask.exception.BadRequestException;
 import com.tassioauad.moviecheck.model.api.resource.CrewResource;
-import com.tassioauad.moviecheck.model.api.resource.MovieResource;
 import com.tassioauad.moviecheck.model.entity.Movie;
 import com.tassioauad.moviecheck.model.entity.Person;
 

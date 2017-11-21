@@ -95,8 +95,7 @@ public class ListMovieWatchedFragment extends Fragment implements ListMovieWatch
     }
 
     public static ListMovieWatchedFragment newInstance() {
-        ListMovieWatchedFragment fragment = new ListMovieWatchedFragment();
-        return fragment;
+        return new ListMovieWatchedFragment();
     }
 
     @Override

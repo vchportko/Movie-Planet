@@ -10,7 +10,6 @@ import com.tassioauad.moviecheck.model.dao.MovieDao;
 import com.tassioauad.moviecheck.model.entity.Movie;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Date;
 import java.util.List;
 

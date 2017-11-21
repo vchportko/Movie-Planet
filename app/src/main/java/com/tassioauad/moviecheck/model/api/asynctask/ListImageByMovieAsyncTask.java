@@ -4,7 +4,6 @@ import android.content.Context;
 
 import com.tassioauad.moviecheck.model.api.asynctask.exception.BadRequestException;
 import com.tassioauad.moviecheck.model.api.resource.ImageResource;
-import com.tassioauad.moviecheck.model.api.resource.VideoResource;
 import com.tassioauad.moviecheck.model.entity.Image;
 import com.tassioauad.moviecheck.model.entity.Movie;
 

@@ -21,7 +21,6 @@ import com.tassioauad.moviecheck.presenter.UserPerfilPresenter;
 import com.tassioauad.moviecheck.view.UserProfileView;
 import com.tassioauad.moviecheck.view.fragment.ListMovieInterestsFragment;
 import com.tassioauad.moviecheck.view.fragment.ListMovieWatchedFragment;
-import com.tassioauad.moviecheck.view.fragment.PersonDetailFragment;
 import com.tassioauad.moviecheck.view.fragment.UserDetailFragment;
 
 import javax.inject.Inject;
@@ -116,8 +115,7 @@ public class UserProfileActivity extends AppCompatActivity implements UserProfil
     }
 
     public static Intent newIntent(Context context) {
-        Intent intent = new Intent(context, UserProfileActivity.class);
-        return intent;
+        return new Intent(context, UserProfileActivity.class);
     }
 
     @Override

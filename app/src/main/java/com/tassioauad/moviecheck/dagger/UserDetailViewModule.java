@@ -1,7 +1,6 @@
 package com.tassioauad.moviecheck.dagger;
 
 import com.tassioauad.moviecheck.model.api.GenreApi;
-import com.tassioauad.moviecheck.model.dao.Dao;
 import com.tassioauad.moviecheck.model.dao.MovieInterestDao;
 import com.tassioauad.moviecheck.model.dao.MovieWatchedDao;
 import com.tassioauad.moviecheck.model.dao.UserDao;

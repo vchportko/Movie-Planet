@@ -203,8 +203,7 @@ public class SearchActivity extends AppCompatActivity implements com.tassioauad.
     }
 
     public static Intent newIntent(Context context) {
-        Intent intent = new Intent(context, SearchActivity.class);
-        return intent;
+        return new Intent(context, SearchActivity.class);
     }
 
     @Override

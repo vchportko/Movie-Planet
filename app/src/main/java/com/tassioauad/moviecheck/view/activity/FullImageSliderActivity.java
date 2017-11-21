@@ -24,7 +24,6 @@ import com.tassioauad.moviecheck.MovieCheckApplication;
 import com.tassioauad.moviecheck.R;
 import com.tassioauad.moviecheck.model.entity.Image;
 
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;

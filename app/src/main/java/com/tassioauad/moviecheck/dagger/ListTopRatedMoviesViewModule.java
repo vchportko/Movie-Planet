@@ -1,9 +1,7 @@
 package com.tassioauad.moviecheck.dagger;
 
 import com.tassioauad.moviecheck.model.api.MovieApi;
-import com.tassioauad.moviecheck.presenter.ListPopularMoviesPresenter;
 import com.tassioauad.moviecheck.presenter.ListTopRatedMoviesPresenter;
-import com.tassioauad.moviecheck.view.ListPopularMoviesView;
 import com.tassioauad.moviecheck.view.ListTopRatedMoviesView;
 import com.tassioauad.moviecheck.view.activity.ListTopRatedMoviesActivity;
 

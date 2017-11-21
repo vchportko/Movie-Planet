@@ -4,13 +4,10 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.tassioauad.moviecheck.R;
 import com.tassioauad.moviecheck.model.entity.Review;
-
-import org.w3c.dom.Text;
 
 import java.util.List;
 

@@ -7,6 +7,7 @@ import android.content.UriMatcher;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.net.Uri;
+import android.support.annotation.NonNull;
 
 import com.tassioauad.moviecheck.model.SqliteConnection;
 
@@ -48,7 +49,7 @@ public class MovieCheckContentProvider extends ContentProvider {
     }
 
     @Override
-    public Cursor query(Uri uri, String[] projection, String selection, String[] selectionArgs, String sortOrder) {
+    public Cursor query(@NonNull Uri uri, String[] projection, String selection, String[] selectionArgs, String sortOrder) {
         switch (uriMatcher.match(uri)) {
             case CODE_MOVIE:
                 return database.query(MovieDaoImpl.TABLE_NAME, projection, selection, selectionArgs, null, null, sortOrder);
@@ -65,7 +66,7 @@ public class MovieCheckContentProvider extends ContentProvider {
     }
 
     @Override
-    public String getType(Uri uri) {
+    public String getType(@NonNull Uri uri) {
         switch (uriMatcher.match(uri)) {
             case CODE_MOVIE:
                 return "vnd.android.cursor.dir/vnd.tassioauad.moviecheck.model.entity.movie";
@@ -82,7 +83,7 @@ public class MovieCheckContentProvider extends ContentProvider {
     }
 
     @Override
-    public Uri insert(Uri uri, ContentValues values) {
+    public Uri insert(@NonNull Uri uri, ContentValues values) {
         long insertId;
         switch (uriMatcher.match(uri)) {
             case CODE_MOVIE:
@@ -109,7 +110,7 @@ public class MovieCheckContentProvider extends ContentProvider {
     }
 
     @Override
-    public int delete(Uri uri, String selection, String[] selectionArgs) {
+    public int delete(@NonNull Uri uri, String selection, String[] selectionArgs) {
         int deleteCount;
         switch (uriMatcher.match(uri)) {
             case CODE_MOVIE:
@@ -138,7 +139,7 @@ public class MovieCheckContentProvider extends ContentProvider {
     }
 
     @Override
-    public int update(Uri uri, ContentValues values, String selection, String[] selectionArgs) {
+    public int update(@NonNull Uri uri, ContentValues values, String selection, String[] selectionArgs) {
         int updateCount;
         switch (uriMatcher.match(uri)) {
             case CODE_MOVIE:

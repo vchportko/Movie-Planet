@@ -87,8 +87,7 @@ public class ListMovieInterestsFragment extends Fragment implements ListMovieInt
     }
 
     public static ListMovieInterestsFragment newInstance() {
-        ListMovieInterestsFragment fragment = new ListMovieInterestsFragment();
-        return fragment;
+        return new ListMovieInterestsFragment();
     }
 
     @Override

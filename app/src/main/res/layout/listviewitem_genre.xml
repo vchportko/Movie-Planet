@@ -15,7 +15,7 @@
         android:padding="3dp"
         android:gravity="center"
         android:layout_gravity="center"
-        android:text="Comedy"
+        android:text="@string/listviewitem_genre_comedy"
         android:textColor="@color/white" />
 
 </LinearLayout>
