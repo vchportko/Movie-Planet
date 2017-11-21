@@ -33,8 +33,7 @@
                     android:layout_marginRight="10dp"
                     android:layout_marginStart="10dp"
                     android:layout_marginTop="5dp"
-                    android:orientation="horizontal"
-                    android:visibility="gone">
+                    android:orientation="horizontal">
 
                     <TextView
                         style="@style/TextH2"
@@ -60,8 +59,7 @@
 
                 <RelativeLayout
                     android:layout_width="match_parent"
-                    android:layout_height="@dimen/poster_height"
-                    android:visibility="gone">
+                    android:layout_height="@dimen/poster_height">
 
                     <android.support.v7.widget.RecyclerView
                         android:id="@+id/recyclerview_nowplaying"
