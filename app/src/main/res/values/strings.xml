@@ -89,7 +89,7 @@
     <string name="searchactivity_movies">Movies</string>
     <string name="searchactivity_celebrities">Celebrities</string>
     <string name="searchactivity_search">Search</string>
-    <string name="searchactivity_hint">Movies and Celebrities…</string>
+    <string name="searchactivity_hint">Movies</string>
 
     <!--SearchPersonActivity-->
     <string name="searchpersonactivity_celebrities">Celebrities</string>
